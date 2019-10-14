@@ -1,0 +1,40 @@
+baseURL = ""
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "aws_gitlab"
+theme = "hugo-theme-learn"
+themesdir = "themes"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= false
+
+[params]
+  editURL = ""
+  description = "aws_gitlab"
+  author = "guiadco"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  themeVariant = "blue"
+  disableLanguageSwitchingButton = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "aws_gitlab"
+weight = 1
+languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Gitlab repo"
+identifier = "ds"
+url = ""
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20

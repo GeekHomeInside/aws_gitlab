@@ -1,0 +1,20 @@
+name: semantic-release
+
+on: [push]
+
+jobs:
+  semantic-release:
+    
+    runs-on: ubuntu-latest
+
+    container:
+      image: docker://terraform:latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Init Terraform
+      run: terraform init
+
+    - name: Validate Terraform plan
+      run: terraform validate
