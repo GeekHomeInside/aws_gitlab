@@ -21,6 +21,12 @@ jobs:
       - name: Build
         run: hugo --gc --minify -s=docs/ -d=./public
 
+      - name: look structure
+        run: ls-ltr
+
+      - name: look structure
+        run: pwd
+
       - name: Deploy
         uses: docker://peaceiris/gh-pages:v2.5.0
         env:
