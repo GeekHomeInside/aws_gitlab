@@ -1,5 +1,7 @@
 # AWS Gitlab Stack
 
+[![Actions Status](https://github.com/geekhomeinside/aws_gitlab/workflows/terraform_validate/badge.svg)](https://github.com/aws_gitlab/terraform_validate/actions)
+
 terraform plan for gitlab and gitlab-runner on aws
 
 This plan use exclusively [cloudposse modules](https://cloudposse.com/)
