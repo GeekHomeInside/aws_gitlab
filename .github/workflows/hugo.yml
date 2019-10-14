@@ -1,9 +1,9 @@
-name: terraform_validate
+name: hugo build
 
 on: [push]
 
 jobs:
-  terraform-validate:
+  hugo-build:
     runs-on: ubuntu-latest
 
     container:
