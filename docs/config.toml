@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://geekhomeinside.github.io/aws_gitlab/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
@@ -9,7 +9,7 @@ metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= false
 
 [params]
-  editURL = ""
+  editURL = "https://github.com/GeekHomeInside/aws_gitlab/blob/master/docs/"
   description = "aws_gitlab"
   author = "guiadco"
   showVisitedLinks = true
@@ -30,7 +30,7 @@ languageName = "English"
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Gitlab repo"
 identifier = "ds"
-url = ""
+url = "https://github.com/GeekHomeInside/aws_gitlab"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]

@@ -19,11 +19,11 @@ jobs:
           hugo-version: "0.58.3"
 
       - name: Build
-        run: hugo --gc --minify -s=docs/ -d ../public
+        run: hugo --gc --minify -s=docs/
 
       - name: Deploy
         uses: docker://peaceiris/gh-pages:v2.5.0
         env:
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ../public
+          PUBLISH_DIR: ./public
