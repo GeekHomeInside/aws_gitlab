@@ -1,14 +1,14 @@
-name: semantic-release
+name: terraform_validate
 
 on: [push]
 
 jobs:
-  semantic-release:
+  terraform-validate:
     
     runs-on: ubuntu-latest
 
     container:
-      image: docker://terraform:latest
+      image: docker://hashicorp/terraform:latest
 
     steps:
     - uses: actions/checkout@v1
