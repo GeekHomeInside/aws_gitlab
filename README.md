@@ -1,6 +1,6 @@
 # AWS Gitlab Stack
 
-[![Actions Status](https://github.com/geekhomeinside/aws_gitlab/workflows/terraform_validate/badge.svg)](https://github.com/aws_gitlab/actions)
+[![Actions Status](https://github.com/geekhomeinside/aws_gitlab/workflows/terraform_validate/badge.svg)](https://github.com/geekhomeinside/aws_gitlab/actions)
 
 terraform plan for gitlab and gitlab-runner on aws
 
