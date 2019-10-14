@@ -1,28 +1,29 @@
-name: hugo build
+name: github pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  hugo-build:
-    runs-on: ubuntu-latest
-
-    container:
-      image: docker://monachus/hugo:latest
-
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@gh-pages
+      - uses: actions/checkout@master
 
-      - name: build hugo website
-        run: hugo -s=doc/ -d ../public
-
-      - name: Commit files
-        run: |
-          git config --local user.email "guiadco@geekhomeinside.com" 
-          git config --local user.name "GitHub Action - GuiAdCo" 
-          git add -A .
-          git commit -m "Add changes"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.2.2
+        with:
+          hugo-version: "0.58.3"
+
+      - name: Build
+        run: hugo --gc --minify -s=doc/ -d ../public
+
+      - name: Deploy
+        uses: docker://peaceiris/gh-pages:v2.5.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ../public
