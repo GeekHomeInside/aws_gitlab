@@ -1,7 +1,7 @@
 module "acm_request_certificate" {
   source                            = "git::https://github.com/cloudposse/terraform-aws-acm-request-certificate.git?ref=master"
-  domain_name                       = "example.com"
+  domain_name                       = "${var.domain_name}"
   process_domain_validation_options = true
   ttl                               = "300"
-  subject_alternative_names         = ["*.example.com"]
+  subject_alternative_names         = ["*.${var.domain_name}"]
 }

@@ -13,7 +13,7 @@ resource "aws_iam_role_policy_attachment" "enhanced_monitoring" {
 # allow rds to assume this role
 data "aws_iam_policy_document" "enhanced_monitoring" {
   statement {
-      actions = [
+    actions = [
       "sts:AssumeRole",
     ]
 
@@ -31,9 +31,9 @@ module "rds_cluster_aurora_postgres" {
   engine          = "aurora-postgresql"
   cluster_family  = "aurora-postgresql9.6"
   cluster_size    = "2"
-  namespace       = "eg"
-  stage           = "dev"
-  name            = "db"
+  namespace       = "${var.namespace}"
+  stage           = "${var.stage}"
+  name            = "${var.name}"
   admin_user      = "admin1"
   admin_password  = "Test123456789"
   db_name         = "dbname"

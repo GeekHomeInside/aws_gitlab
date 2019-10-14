@@ -1,5 +1,7 @@
 # AWS Gitlab Stack
 
+TF 12
+
 [![Actions Status](https://github.com/geekhomeinside/aws_gitlab/workflows/terraform_validate/badge.svg)](https://github.com/geekhomeinside/aws_gitlab/actions)
 
 terraform plan for gitlab and gitlab-runner on aws
